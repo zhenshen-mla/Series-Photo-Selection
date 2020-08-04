@@ -6,8 +6,8 @@
   In this paper, we develop a novel deep CNN architecture that aggregates multi scale features from different network layers, in order to capture the subtle differences between series photos. To reduce the risk of redundant or even interfering features, we introduce the spatial-channel self-attention mechanism to adaptively recalibrate the features at each layer, so that informative features can be selectively emphasized and less useful ones suppressed.   
   
 ## Structure
-![image](https://github.com/zhenshen-mla/AFANet/blob/master/examples/structure.png)
-  Structure of the AFA layer for multi-task CNNs. It is a plug-and-play component to connect any intermediate convolutional layers of single-task CNNs. Inside the AFA layer, there are sequentially two modules, i.e., CAM and SAM, to support the adaptive feature aggregation between tasks. The output feature maps remain the same size as the inputs, and can be directly fed to the next layers of single-task CNNs.   
+![image](https://github.com/zhenshen-mla/Series-Photo-Selection/blob/master/examples/structure.png)  
+   Overview of the proposed deep network architecture for series photo selection. The backbone of our learning algorithm is an end-to-end deep CNN architecture. In our study, features from different network layers are jointly leveraged to help capture the subtle differences between series photos.  
   
 ## Models
   * `/models/layer_afa.py`: implementation of afa layer;
