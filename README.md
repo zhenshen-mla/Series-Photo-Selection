@@ -10,11 +10,12 @@
    Overview of the proposed deep network architecture for series photo selection. The backbone of our learning algorithm is an end-to-end deep CNN architecture. In our study, features from different network layers are jointly leveraged to help capture the subtle differences between series photos.  
   
 ## Models
-  * `/models/layer_afa.py`: implementation of afa layer;
-  * `/models/net_image_resnet.py`: single task network based resnet50;   
-  * `/models/net_image_afalayer.py`: image tasks aggregation with afa layer;   
-  * `/models/net_pixel_deeplab.py`: single task network based deeplab;   
-  * `/models/net_pixel_afalayer.py`: pixel tasks aggregation with afa layer;   
+  * `/models/PAUnit.py`: implementation of Parallel Attention Unit;  
+  * `/models/ResNet18.py`: baseline with resnet18 backbone;  
+  * `/models/ResNet50.py`: baseline with resnet50 backbone;  
+  * `/models/ResNet101.py`: baseline with resnet101 backbone;  
+  * `/models/Inceptionv3.py`: baseline with Inception network;  
+  * `/models/PAUnit.py`: resnet50 network with PAUnit;   
   
 ## Requirements  
 
@@ -28,10 +29,10 @@
 ## Installation
   1. Clone the repo:   
     ```
-    git clone https://github.com/zhenshen-mla/AFANet.git   
+    git clone https://github.com/zhenshen-mla/Series-Photo-Selection.git   
     ```   
     ```
-    cd AFANet
+    cd Series-Photo-Selection  
     ```
   2. For custom dependencies:   
     ```
