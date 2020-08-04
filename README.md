@@ -23,7 +23,8 @@
   numpy  
   PyTorch >= 1.0  
   torchvision  
-  tensorboardX
+  tensorboardX  
+  sklearn  
   
 
 ## Installation
@@ -36,10 +37,11 @@
     ```
   2. For custom dependencies:   
     ```
-    pip install matplotlib tensorboardX   
+    pip install matplotlib tensorboardX sklearn   
     ```
-## For Training   
+## Usage   
   1. Download the dataset([Automatic triage for a photo series](https://phototriage.cs.princeton.edu/dataset.html)) and configure the data path.   
-  2. Train the single-task and save the pretrained single-task model in `/weight`:   
-  3. For pixel tasks, using Deeplabv3+ network with ResNet backbone to conduct semantic segmentation and depth prediction. For image tasks, using ResNet network to conduct age prediction and gender classification (load pretrained model in `/weight`):   
-  
+  2. Train the baseline with ResNet backbone:  
+  ``` python train_resnet.py ```  
+  3. Train the network with PAUnit:  
+  ``` python train_pau.py ```  
